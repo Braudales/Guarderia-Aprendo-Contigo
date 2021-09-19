@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Win.GAP
 {
-    public partial class FormLogin : Form
+    public partial class Formclavemaestra : Form
     {
-        public FormLogin()
+        public Formclavemaestra()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }

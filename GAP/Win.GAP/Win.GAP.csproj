@@ -46,6 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formclavemaestra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formclavemaestra.Designer.cs">
+      <DependentUpon>Formclavemaestra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCotizaciones.Designer.cs">
+      <DependentUpon>FormCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCuentasporcobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCuentasporcobrar.Designer.cs">
+      <DependentUpon>FormCuentasporcobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCuentasporpagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCuentasporpagar.Designer.cs">
+      <DependentUpon>FormCuentasporpagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDevoluciones.Designer.cs">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFacturacion.Designer.cs">
+      <DependentUpon>FormFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGastosfijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGastosfijos.Designer.cs">
+      <DependentUpon>FormGastosfijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGastosvariables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGastosvariables.Designer.cs">
+      <DependentUpon>FormGastosvariables.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +112,58 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRecargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecargos.Designer.cs">
+      <DependentUpon>FormRecargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServiciosOpcionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServiciosOpcionales.Designer.cs">
+      <DependentUpon>FormServiciosOpcionales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formclavemaestra.resx">
+      <DependentUpon>Formclavemaestra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCotizaciones.resx">
+      <DependentUpon>FormCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCuentasporcobrar.resx">
+      <DependentUpon>FormCuentasporcobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCuentasporpagar.resx">
+      <DependentUpon>FormCuentasporpagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDevoluciones.resx">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFacturacion.resx">
+      <DependentUpon>FormFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGastosfijos.resx">
+      <DependentUpon>FormGastosfijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGastosvariables.resx">
+      <DependentUpon>FormGastosvariables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecargos.resx">
+      <DependentUpon>FormRecargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServiciosOpcionales.resx">
+      <DependentUpon>FormServiciosOpcionales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GAP.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Palabra de Dios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clave gerencial.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

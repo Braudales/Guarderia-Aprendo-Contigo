@@ -17,7 +17,93 @@ namespace Win.GAP
             InitializeComponent();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formLogin = new FormLogin();
+            formLogin.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void agregarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var formclientes = new FormClientes();
+            formclientes.MdiParent = this;
+            formclientes.Show();
+        }
+
+        private void agregarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            var formFacturacion = new FormFacturacion();
+            formFacturacion.MdiParent = this;
+            formFacturacion.Show();
+        }
+
+        private void agregarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            var formserviciosopcionales = new FormServiciosOpcionales();
+            formserviciosopcionales.MdiParent = this;
+            formserviciosopcionales.Show();
+        }
+
+        private void agregarToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            var formrecargo = new FormRecargos();
+            formrecargo.MdiParent = this;
+            formrecargo.Show();
+        }
+
+        private void agregarToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            var formcuentasporcobrar = new FormCuentasporcobrar();
+            formcuentasporcobrar.MdiParent = this;
+            formcuentasporcobrar.Show();
+        }
+
+        private void agregarToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            var formcuentasporpagar = new FormCuentasporpagar();
+            formcuentasporpagar.MdiParent = this;
+            formcuentasporpagar.Show();
+        }
+
+        private void agregarToolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            var formgastosfijos = new FormGastosfijos();
+            formgastosfijos.MdiParent = this;
+            formgastosfijos.Show();
+        }
+
+        private void agregarToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            var formgastosvariables = new FormGastosvariables();
+            formgastosvariables.MdiParent = this;
+            formgastosvariables.Show();
+        }
+
+        private void agregarToolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            var formcotizaciones = new FormCotizaciones();
+            formcotizaciones.MdiParent = this;
+            formcotizaciones.Show();
+        }
+
+        private void agregarToolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            var formdevoluciones = new FormDevoluciones();
+            formdevoluciones.MdiParent = this;
+            formdevoluciones.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

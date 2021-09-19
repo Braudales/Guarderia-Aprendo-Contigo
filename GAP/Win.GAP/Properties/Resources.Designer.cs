@@ -63,9 +63,29 @@ namespace Win.GAP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clave_gerencial {
+            get {
+                object obj = ResourceManager.GetObject("clave gerencial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GAP {
             get {
                 object obj = ResourceManager.GetObject("GAP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Palabra_de_Dios {
+            get {
+                object obj = ResourceManager.GetObject("Palabra de Dios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

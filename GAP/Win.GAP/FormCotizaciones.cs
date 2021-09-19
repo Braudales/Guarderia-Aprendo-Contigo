@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Win.GAP
 {
-    public partial class FormLogin : Form
+    public partial class FormCotizaciones : Form
     {
-        public FormLogin()
+        public FormCotizaciones()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

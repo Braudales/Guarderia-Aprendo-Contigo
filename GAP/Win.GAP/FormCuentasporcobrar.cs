@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Win.GAP
 {
-    public partial class FormLogin : Form
+    public partial class FormCuentasporcobrar : Form
     {
-        public FormLogin()
+        public FormCuentasporcobrar()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
