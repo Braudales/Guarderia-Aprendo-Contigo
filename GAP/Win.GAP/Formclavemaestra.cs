@@ -21,5 +21,25 @@ namespace Win.GAP
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
+           string contrasena;
+           contrasena = textBox1.Text;
+
+           
+            if (contrasena == "1")
+            {
+                this.Close();
+              
+            }
+            else
+            {
+                MessageBox.Show("contrasena incorrecta");
+   
+            }
+      
+        }
     }
 }

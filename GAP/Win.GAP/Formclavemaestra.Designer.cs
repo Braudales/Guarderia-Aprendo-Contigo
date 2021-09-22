@@ -38,8 +38,10 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(92, 95);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(184, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -66,12 +68,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(284, 202);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Name = "Formclavemaestra";
-            this.Text = "clavemaestra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Clave Maestra";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.GAP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,39 @@ namespace Win.GAP
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
         public FormLogin()
         {
             InitializeComponent();
+            _seguridad = new SeguridadBL();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario;
+            string contrasena;
+            usuario = textBox1.Text;
+            contrasena = textBox2.Text;
+
+            var resultado = _seguridad.autorizar(usuario, contrasena);
+            if (resultado==true)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("contrasena incorrecta");
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

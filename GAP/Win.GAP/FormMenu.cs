@@ -17,12 +17,23 @@ namespace Win.GAP
             InitializeComponent();
         }
 
+        private void Clavegerencial()
+        {
+            var formclavemaestra = new Formclavemaestra();
+            formclavemaestra.ShowDialog();
+        }
+
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            Login();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+
+        private void Login()
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
@@ -106,6 +117,16 @@ namespace Win.GAP
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Clavegerencial();
         }
     }
 }
