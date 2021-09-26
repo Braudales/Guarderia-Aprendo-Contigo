@@ -127,6 +127,8 @@ namespace Win.GAP
         private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
            Clavegerencial();
+           
+         
         }
     }
 }

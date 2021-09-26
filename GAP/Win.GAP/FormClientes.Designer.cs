@@ -44,7 +44,6 @@
             System.Windows.Forms.Label telefonoPLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.clientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -80,6 +79,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionMLabel = new System.Windows.Forms.Label();
@@ -95,9 +99,10 @@
             telefonoPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).BeginInit();
             this.clientesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -258,13 +263,9 @@
             this.clientesBindingNavigator.Name = "clientesBindingNavigator";
             this.clientesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.clientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientesBindingNavigator.Size = new System.Drawing.Size(1066, 25);
+            this.clientesBindingNavigator.Size = new System.Drawing.Size(1086, 25);
             this.clientesBindingNavigator.TabIndex = 0;
             this.clientesBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
             // 
             // bindingNavigatorCountItem
             // 
@@ -490,7 +491,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(141, 457);
+            this.button1.Location = new System.Drawing.Point(144, 502);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 28;
@@ -500,7 +501,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(276, 457);
+            this.button2.Location = new System.Drawing.Point(279, 502);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 29;
@@ -510,7 +511,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(423, 457);
+            this.button3.Location = new System.Drawing.Point(426, 502);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 30;
@@ -520,7 +521,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(561, 457);
+            this.button4.Location = new System.Drawing.Point(564, 502);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 31;
@@ -540,7 +541,7 @@
             this.groupBox1.Controls.Add(identidadPLabel);
             this.groupBox1.Controls.Add(this.direccionPTextBox);
             this.groupBox1.Controls.Add(direccionPLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 184);
+            this.groupBox1.Location = new System.Drawing.Point(21, 249);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(538, 227);
             this.groupBox1.TabIndex = 32;
@@ -559,7 +560,7 @@
             this.groupBox2.Controls.Add(identidadMLabel);
             this.groupBox2.Controls.Add(this.direccionMTextBox);
             this.groupBox2.Controls.Add(direccionMLabel);
-            this.groupBox2.Location = new System.Drawing.Point(598, 184);
+            this.groupBox2.Location = new System.Drawing.Point(607, 249);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(468, 227);
             this.groupBox2.TabIndex = 33;
@@ -573,11 +574,53 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(249, 20);
             this.dateTimePicker1.TabIndex = 34;
             // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(701, 12);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(217, 185);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 35;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(701, 203);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.TabIndex = 36;
+            this.button5.Text = "Agregar Fotos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(823, 203);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(95, 23);
+            this.button6.TabIndex = 37;
+            this.button6.Text = "Remover Fotos";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 548);
+            this.ClientSize = new System.Drawing.Size(1086, 548);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -600,11 +643,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).EndInit();
             this.clientesBindingNavigator.ResumeLayout(false);
             this.clientesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -649,5 +693,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

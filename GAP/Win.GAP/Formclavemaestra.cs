@@ -27,11 +27,14 @@ namespace Win.GAP
           
            string contrasena;
            contrasena = textBox1.Text;
-
+            var formcambiosclave = new FormCambiosClave();
            
             if (contrasena == "1")
             {
                 this.Close();
+              
+                formcambiosclave.Show();
+               
               
             }
             else
@@ -40,6 +43,11 @@ namespace Win.GAP
    
             }
       
+        }
+
+        private void Formclavemaestra_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

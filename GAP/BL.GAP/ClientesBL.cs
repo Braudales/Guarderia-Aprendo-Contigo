@@ -93,6 +93,8 @@ namespace BL.GAP
         public int telefonoM { get; set; }
         public string ocupacionM { get; set; }
         public string direccionM { get; set; }
+        public byte[] Foto { get; set; }
+        public DateTime calendario { get; set; }
         public bool activo { get; set; }
 
 
