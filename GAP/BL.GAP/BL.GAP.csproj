@@ -64,6 +64,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clientes.datasource" />
     <None Include="Properties\DataSources\ClientesBL.datasource" />
+    <None Include="Properties\DataSources\Contexto.datasource" />
+    <None Include="Properties\DataSources\Resultado.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

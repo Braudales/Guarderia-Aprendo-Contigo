@@ -59,7 +59,7 @@
             this.clientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.Cancelar = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.codigoTextBox = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.TextBox();
             this.direccionMTextBox = new System.Windows.Forms.TextBox();
             this.direccionPTextBox = new System.Windows.Forms.TextBox();
             this.identidadMTextBox = new System.Windows.Forms.TextBox();
@@ -79,6 +79,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionMLabel = new System.Windows.Forms.Label();
@@ -115,9 +116,9 @@
             codigoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoLabel.Location = new System.Drawing.Point(59, 55);
             codigoLabel.Name = "codigoLabel";
-            codigoLabel.Size = new System.Drawing.Size(66, 16);
+            codigoLabel.Size = new System.Drawing.Size(21, 16);
             codigoLabel.TabIndex = 4;
-            codigoLabel.Text = "Codigo :";
+            codigoLabel.Text = "Id";
             // 
             // direccionMLabel
             // 
@@ -380,14 +381,14 @@
             this.activoCheckBox.TabIndex = 3;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // codigoTextBox
+            // Id
             // 
-            this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "codigo", true));
-            this.codigoTextBox.Location = new System.Drawing.Point(213, 52);
-            this.codigoTextBox.Name = "codigoTextBox";
-            this.codigoTextBox.ReadOnly = true;
-            this.codigoTextBox.Size = new System.Drawing.Size(249, 20);
-            this.codigoTextBox.TabIndex = 5;
+            this.Id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Id", true));
+            this.Id.Location = new System.Drawing.Point(213, 52);
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Size = new System.Drawing.Size(249, 20);
+            this.Id.TabIndex = 5;
             // 
             // direccionMTextBox
             // 
@@ -495,6 +496,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -504,6 +506,7 @@
             this.button2.TabIndex = 29;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -513,6 +516,7 @@
             this.button3.TabIndex = 30;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
@@ -522,6 +526,7 @@
             this.button4.TabIndex = 31;
             this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
@@ -561,11 +566,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información de Madre";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(213, 117);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(249, 20);
+            this.dateTimePicker1.TabIndex = 34;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 548);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
@@ -575,7 +588,7 @@
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(codigoLabel);
-            this.Controls.Add(this.codigoTextBox);
+            this.Controls.Add(this.Id);
             this.Controls.Add(nombredelninoLabel);
             this.Controls.Add(this.nombredelninoTextBox);
             this.Controls.Add(this.clientesBindingNavigator);
@@ -614,7 +627,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton clientesBindingNavigatorSaveItem;
         private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.TextBox codigoTextBox;
+        private System.Windows.Forms.TextBox Id;
         private System.Windows.Forms.TextBox direccionMTextBox;
         private System.Windows.Forms.TextBox direccionPTextBox;
         private System.Windows.Forms.TextBox identidadMTextBox;
@@ -635,5 +648,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

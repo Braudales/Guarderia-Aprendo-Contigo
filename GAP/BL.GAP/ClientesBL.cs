@@ -34,10 +34,8 @@ namespace BL.GAP
             {
                 return resultado;
             }
-            if (clientes.codigo == 0)
-            {
-                clientes.codigo = ListaClientes.Max(item => item.codigo) + 1;
-            }
+            _contexto.SaveChanges();
+
             resultado.existoso=true;
             return resultado;
         }
@@ -48,13 +46,14 @@ namespace BL.GAP
             ListaClientes.Add(nuevocliente);
 
         }
-        public bool eliminarclientes(int codigo)
+        public bool eliminarclientes(int id)
         {
         foreach (var cliente in ListaClientes)
 	{
-                if (cliente.codigo==codigo)
+                if (cliente.Id==id)
                 {
                     ListaClientes.Remove(cliente);
+                    _contexto.SaveChanges();
                     return true;
                 }
 	}
@@ -66,12 +65,12 @@ namespace BL.GAP
             resultado.existoso = true;
             
 
-            if (cliente.Nombredelnino== "")
+            if (string.IsNullOrEmpty(cliente.Nombredelnino)==true)
             {
                 resultado.Mensaje = "Ingrese un datos en nombre del nino(a)";
                 resultado.existoso = false;
             }
-            if (cliente.direccionM=="")
+            if (cliente.direccionM==" ")
             {
                 resultado.Mensaje = "llene el campo";
                 resultado.existoso = false;
@@ -82,7 +81,7 @@ namespace BL.GAP
     }
     public class Clientes
     {
-        public int codigo { get; set; }
+        public int Id { get; set; }
         public string Nombredelnino { get; set; }
         public string Nombredelpadre { get; set; }
         public long identidadP { get; set; }
@@ -95,6 +94,7 @@ namespace BL.GAP
         public string ocupacionM { get; set; }
         public string direccionM { get; set; }
         public bool activo { get; set; }
+
 
     }
     public class Resultado

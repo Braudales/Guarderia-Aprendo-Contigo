@@ -107,13 +107,13 @@ namespace Win.GAP
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             
-            if (codigoTextBox.Text != "")
+            if (Id.Text != "")
             {
                     var resultado = MessageBox.Show("Desea eliminar este registro ", "Eliminar", MessageBoxButtons.YesNo);
                     if (resultado == DialogResult.Yes)
                     {
-                        var codigo = Convert.ToInt32(codigoTextBox.Text);
-                    Eliminar(codigo);
+                        var id = Convert.ToInt32(Id.Text);
+                    Eliminar(id);
                 }
                
 
@@ -122,10 +122,10 @@ namespace Win.GAP
         }
   
 
-        private void Eliminar(int codigo)
+        private void Eliminar(int Id)
         {
            
-            var resultado = _clientes.eliminarclientes(codigo);
+            var resultado = _clientes.eliminarclientes(Id);
             if (resultado)
             {
                 clientesBindingSource.ResetBindings(false);
@@ -141,6 +141,62 @@ namespace Win.GAP
             deshabilitarHabilitarbotones(true);
             Eliminar(0);
         }
-      
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _clientes.agregarclientes();
+            clientesBindingSource.MoveLast();
+            deshabilitarHabilitarbotones(false);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            if (Id.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea eliminar este registro ", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(Id.Text);
+                    Eliminar(id);
+                }
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.EndEdit();
+            var clientes = (Clientes)clientesBindingSource.Current;
+            var resultado = _clientes.guardarclientes(clientes);
+            if (resultado.existoso == true)
+            {
+                clientesBindingSource.ResetBindings(false);
+                deshabilitarHabilitarbotones(true);
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            clientesBindingSource.EndEdit();
+            var clientes = (Clientes)clientesBindingSource.Current;
+            var resultado = _clientes.guardarclientes(clientes);
+            if (resultado.existoso == true)
+            {
+                clientesBindingSource.ResetBindings(false);
+                deshabilitarHabilitarbotones(true);
+                MessageBox.Show("Archivo modificado");
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+        }
     }
 }

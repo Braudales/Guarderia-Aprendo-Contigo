@@ -199,6 +199,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.GAP.Clientes.datasource" />
     <None Include="Properties\DataSources\BL.GAP.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\BL.GAP.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.GAP.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.GAP.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
