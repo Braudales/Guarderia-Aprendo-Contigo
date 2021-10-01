@@ -27,6 +27,15 @@ namespace BL.GAP
             return ListaClientes;
         }
 
+        public BindingList<Clientes> ObtenerClientes(string buscar)
+        {
+
+           var query = _contexto.clientes.Where (Clientes=> Clientes.Nombredelnino.ToLower().Contains(buscar.ToLower())).ToList();
+            ListaClientes = new BindingList<Clientes>(query); 
+
+            return ListaClientes;
+        }
+
         public Resultado guardarclientes(Clientes clientes)
         {
             var resultado = validar(clientes);

@@ -81,6 +81,7 @@
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionMLabel = new System.Windows.Forms.Label();
@@ -582,11 +583,20 @@
             this.fechaingresoDateTimePicker.Size = new System.Drawing.Size(249, 20);
             this.fechaingresoDateTimePicker.TabIndex = 41;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(213, 154);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(249, 20);
+            this.textBox1.TabIndex = 42;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 548);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.fechaingresoDateTimePicker);
             this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(label1);
@@ -659,5 +669,6 @@
         private System.Windows.Forms.TextBox identidadPTextBox;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.DateTimePicker fechaingresoDateTimePicker;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -227,5 +227,11 @@ namespace Win.GAP
         {
            
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var busqueda = textBox1.Text;
+            clientesBindingSource.DataSource = _clientes.ObtenerClientes(busqueda);
+        }
     }
 }
