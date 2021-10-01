@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BL.GAP
 {
-       public class Contexto:DbContext
+    public class Contexto : DbContext
     {
-        public Contexto(): base("Guarderia Aprendo Contigo")
+        public Contexto() : base("Guarderia Aprendo Contigo")
         {
 
         }
@@ -18,7 +18,7 @@ namespace BL.GAP
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet <Clientes>clientes { get; set; }
-
+        public DbSet<Clientes> clientes { get; set; }
+        public DbSet<Servicioopcional> servicioopcional { get; set; }
     }
 }

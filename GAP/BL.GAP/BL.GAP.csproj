@@ -54,8 +54,10 @@
   <ItemGroup>
     <Compile Include="ClientesBL.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="Datosdeinicio.cs" />
     <Compile Include="SeguridadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioopcionalBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -65,9 +67,13 @@
     <None Include="Properties\DataSources\Clientes.datasource" />
     <None Include="Properties\DataSources\ClientesBL.datasource" />
     <None Include="Properties\DataSources\Contexto.datasource" />
+    <None Include="Properties\DataSources\Datosdeinicio.datasource" />
     <None Include="Properties\DataSources\Resultado.datasource" />
     <None Include="Properties\DataSources\SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\Servicioopcional.datasource" />
+    <None Include="Properties\DataSources\ServicioopcionalBL.datasource" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

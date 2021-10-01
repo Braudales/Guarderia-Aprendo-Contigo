@@ -47,5 +47,38 @@ namespace Win.GAP
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                string usuario;
+                string contrasena;
+                usuario = textBox1.Text;
+                contrasena = textBox2.Text;
+
+                var resultado = _seguridad.autorizar(usuario, contrasena);
+
+                if (resultado == true)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("contrasena incorrecta");
+                }
+            }
+
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+       
+        }
     }
 }

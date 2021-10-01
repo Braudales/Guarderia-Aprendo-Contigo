@@ -17,26 +17,26 @@ namespace BL.GAP
         {
             _contexto = new Contexto();
             ListaClientes = new BindingList<Clientes>();
-           
+
         }
         public BindingList<Clientes> ObtenerClientes()
         {
             _contexto.clientes.Load();
             ListaClientes = _contexto.clientes.Local.ToBindingList();
-          
+
             return ListaClientes;
         }
 
         public Resultado guardarclientes(Clientes clientes)
         {
             var resultado = validar(clientes);
-            if (resultado.existoso==false)
+            if (resultado.existoso == false)
             {
                 return resultado;
             }
             _contexto.SaveChanges();
 
-            resultado.existoso=true;
+            resultado.existoso = true;
             return resultado;
         }
 
@@ -48,29 +48,29 @@ namespace BL.GAP
         }
         public bool eliminarclientes(int id)
         {
-        foreach (var cliente in ListaClientes)
-	{
-                if (cliente.Id==id)
+            foreach (var cliente in ListaClientes)
+            {
+                if (cliente.Id == id)
                 {
                     ListaClientes.Remove(cliente);
                     _contexto.SaveChanges();
                     return true;
                 }
-	}
-        return false;
+            }
+            return false;
         }
-         private Resultado validar(Clientes cliente)
+        private Resultado validar(Clientes cliente)
         {
             var resultado = new Resultado();
             resultado.existoso = true;
-            
 
-            if (string.IsNullOrEmpty(cliente.Nombredelnino)==true)
+
+            if (string.IsNullOrEmpty(cliente.Nombredelnino) == true)
             {
                 resultado.Mensaje = "Ingrese un datos en nombre del nino(a)";
                 resultado.existoso = false;
             }
-            if (cliente.direccionM==" ")
+            if (cliente.direccionM == " ")
             {
                 resultado.Mensaje = "llene el campo";
                 resultado.existoso = false;
@@ -84,26 +84,26 @@ namespace BL.GAP
         public int Id { get; set; }
         public string Nombredelnino { get; set; }
         public string Nombredelpadre { get; set; }
-        public long identidadP { get; set; }
+        public DateTime fechaingreso { get; set; }
+        public double identidadP { get; set; }
         public int telefonoP { get; set; }
         public string ocupacionP { get; set; }
         public string direccionP { get; set; }
         public string Nombredelamadre { get; set; }
-        public long identidadM { get; set; }
+        public double identidadM { get; set; }
         public int telefonoM { get; set; }
         public string ocupacionM { get; set; }
         public string direccionM { get; set; }
         public byte[] Foto { get; set; }
-       
         public bool activo { get; set; }
 
 
     }
     public class Resultado
-        {
+    {
         public bool existoso { get; set; }
         public string Mensaje { get; set; }
-       
+
     }
 
 }

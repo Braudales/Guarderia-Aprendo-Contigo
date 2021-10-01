@@ -57,8 +57,7 @@ namespace Win.GAP
         {
             clientesBindingSource.EndEdit();
             var clientes = (Clientes)clientesBindingSource.Current;
-
-            if(fotoPictureBox.Image != null)
+            if (fotoPictureBox.Image!=null)
             {
                 clientes.Foto = Program.imagetobyteArray(fotoPictureBox.Image);
             }
@@ -66,12 +65,13 @@ namespace Win.GAP
             {
                 clientes.Foto = null;
             }
-
+          
             var resultado = _clientes.guardarclientes(clientes);
             if (resultado.existoso == true)
             {
                 clientesBindingSource.ResetBindings(false);
                 deshabilitarHabilitarbotones(true);
+                MessageBox.Show("Archivo guardaro exitosamente");
             }
             else
             {
@@ -219,12 +219,13 @@ namespace Win.GAP
                 var fileInfo = new FileInfo(archivo);
                 var fileStream = fileInfo.OpenRead();
                 fotoPictureBox.Image = Image.FromStream(fileStream);
+                
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            fotoPictureBox.Image = null;
+           
         }
     }
 }

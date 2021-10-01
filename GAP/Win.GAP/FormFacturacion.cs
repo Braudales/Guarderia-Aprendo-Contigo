@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.GAP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Win.GAP
 {
     public partial class FormFacturacion : Form
     {
+    
         public FormFacturacion()
         {
             InitializeComponent();
+          
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -23,6 +26,11 @@ namespace Win.GAP
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormFacturacion_Load(object sender, EventArgs e)
         {
 
         }

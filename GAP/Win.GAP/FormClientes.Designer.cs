@@ -42,6 +42,7 @@
             System.Windows.Forms.Label ocupacionPLabel;
             System.Windows.Forms.Label telefonoMLabel;
             System.Windows.Forms.Label telefonoPLabel;
+            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.clientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -62,7 +63,6 @@
             this.direccionMTextBox = new System.Windows.Forms.TextBox();
             this.direccionPTextBox = new System.Windows.Forms.TextBox();
             this.identidadMTextBox = new System.Windows.Forms.TextBox();
-            this.identidadPTextBox = new System.Windows.Forms.TextBox();
             this.nombredelamadreTextBox = new System.Windows.Forms.TextBox();
             this.nombredelninoTextBox = new System.Windows.Forms.TextBox();
             this.nombredelpadreTextBox = new System.Windows.Forms.TextBox();
@@ -72,18 +72,15 @@
             this.telefonoPTextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.identidadPTextBox = new System.Windows.Forms.TextBox();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fechaingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionMLabel = new System.Windows.Forms.Label();
@@ -97,12 +94,13 @@
             ocupacionPLabel = new System.Windows.Forms.Label();
             telefonoMLabel = new System.Windows.Forms.Label();
             telefonoPLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).BeginInit();
             this.clientesBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -129,7 +127,7 @@
             // 
             direccionMLabel.AutoSize = true;
             direccionMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionMLabel.Location = new System.Drawing.Point(-3, 169);
+            direccionMLabel.Location = new System.Drawing.Point(16, 25);
             direccionMLabel.Name = "direccionMLabel";
             direccionMLabel.Size = new System.Drawing.Size(130, 16);
             direccionMLabel.TabIndex = 6;
@@ -139,7 +137,7 @@
             // 
             direccionPLabel.AutoSize = true;
             direccionPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionPLabel.Location = new System.Drawing.Point(36, 183);
+            direccionPLabel.Location = new System.Drawing.Point(6, 25);
             direccionPLabel.Name = "direccionPLabel";
             direccionPLabel.Size = new System.Drawing.Size(128, 16);
             direccionPLabel.TabIndex = 8;
@@ -149,7 +147,7 @@
             // 
             identidadMLabel.AutoSize = true;
             identidadMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            identidadMLabel.Location = new System.Drawing.Point(-3, 60);
+            identidadMLabel.Location = new System.Drawing.Point(17, 56);
             identidadMLabel.Name = "identidadMLabel";
             identidadMLabel.Size = new System.Drawing.Size(129, 16);
             identidadMLabel.TabIndex = 10;
@@ -159,7 +157,7 @@
             // 
             identidadPLabel.AutoSize = true;
             identidadPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            identidadPLabel.Location = new System.Drawing.Point(36, 78);
+            identidadPLabel.Location = new System.Drawing.Point(7, 56);
             identidadPLabel.Name = "identidadPLabel";
             identidadPLabel.Size = new System.Drawing.Size(127, 16);
             identidadPLabel.TabIndex = 12;
@@ -169,7 +167,7 @@
             // 
             nombredelamadreLabel.AutoSize = true;
             nombredelamadreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombredelamadreLabel.Location = new System.Drawing.Point(-3, 25);
+            nombredelamadreLabel.Location = new System.Drawing.Point(17, 90);
             nombredelamadreLabel.Name = "nombredelamadreLabel";
             nombredelamadreLabel.Size = new System.Drawing.Size(141, 16);
             nombredelamadreLabel.TabIndex = 14;
@@ -189,7 +187,7 @@
             // 
             nombredelpadreLabel.AutoSize = true;
             nombredelpadreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombredelpadreLabel.Location = new System.Drawing.Point(36, 42);
+            nombredelpadreLabel.Location = new System.Drawing.Point(7, 92);
             nombredelpadreLabel.Name = "nombredelpadreLabel";
             nombredelpadreLabel.Size = new System.Drawing.Size(138, 16);
             nombredelpadreLabel.TabIndex = 18;
@@ -199,7 +197,7 @@
             // 
             ocupacionMLabel.AutoSize = true;
             ocupacionMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ocupacionMLabel.Location = new System.Drawing.Point(-3, 129);
+            ocupacionMLabel.Location = new System.Drawing.Point(16, 123);
             ocupacionMLabel.Name = "ocupacionMLabel";
             ocupacionMLabel.Size = new System.Drawing.Size(138, 16);
             ocupacionMLabel.TabIndex = 20;
@@ -209,7 +207,7 @@
             // 
             ocupacionPLabel.AutoSize = true;
             ocupacionPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ocupacionPLabel.Location = new System.Drawing.Point(39, 150);
+            ocupacionPLabel.Location = new System.Drawing.Point(10, 129);
             ocupacionPLabel.Name = "ocupacionPLabel";
             ocupacionPLabel.Size = new System.Drawing.Size(136, 16);
             ocupacionPLabel.TabIndex = 22;
@@ -219,7 +217,7 @@
             // 
             telefonoMLabel.AutoSize = true;
             telefonoMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoMLabel.Location = new System.Drawing.Point(-3, 95);
+            telefonoMLabel.Location = new System.Drawing.Point(16, 164);
             telefonoMLabel.Name = "telefonoMLabel";
             telefonoMLabel.Size = new System.Drawing.Size(126, 16);
             telefonoMLabel.TabIndex = 24;
@@ -229,11 +227,21 @@
             // 
             telefonoPLabel.AutoSize = true;
             telefonoPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoPLabel.Location = new System.Drawing.Point(36, 113);
+            telefonoPLabel.Location = new System.Drawing.Point(10, 166);
             telefonoPLabel.Name = "telefonoPLabel";
             telefonoPLabel.Size = new System.Drawing.Size(124, 16);
             telefonoPLabel.TabIndex = 26;
             telefonoPLabel.Text = "Telefono Padre :";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(59, 117);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(129, 16);
+            label1.TabIndex = 39;
+            label1.Text = "Fecha de Ingreso";
             // 
             // clientesBindingNavigator
             // 
@@ -263,7 +271,7 @@
             this.clientesBindingNavigator.Name = "clientesBindingNavigator";
             this.clientesBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.clientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientesBindingNavigator.Size = new System.Drawing.Size(1086, 25);
+            this.clientesBindingNavigator.Size = new System.Drawing.Size(1095, 25);
             this.clientesBindingNavigator.TabIndex = 0;
             this.clientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -394,7 +402,7 @@
             // direccionMTextBox
             // 
             this.direccionMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "direccionM", true));
-            this.direccionMTextBox.Location = new System.Drawing.Point(144, 165);
+            this.direccionMTextBox.Location = new System.Drawing.Point(163, 21);
             this.direccionMTextBox.Name = "direccionMTextBox";
             this.direccionMTextBox.Size = new System.Drawing.Size(269, 20);
             this.direccionMTextBox.TabIndex = 7;
@@ -402,7 +410,7 @@
             // direccionPTextBox
             // 
             this.direccionPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "direccionP", true));
-            this.direccionPTextBox.Location = new System.Drawing.Point(180, 179);
+            this.direccionPTextBox.Location = new System.Drawing.Point(150, 21);
             this.direccionPTextBox.Name = "direccionPTextBox";
             this.direccionPTextBox.Size = new System.Drawing.Size(306, 20);
             this.direccionPTextBox.TabIndex = 9;
@@ -411,24 +419,15 @@
             // identidadMTextBox
             // 
             this.identidadMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "identidadM", true));
-            this.identidadMTextBox.Location = new System.Drawing.Point(144, 56);
+            this.identidadMTextBox.Location = new System.Drawing.Point(164, 52);
             this.identidadMTextBox.Name = "identidadMTextBox";
             this.identidadMTextBox.Size = new System.Drawing.Size(269, 20);
             this.identidadMTextBox.TabIndex = 11;
             // 
-            // identidadPTextBox
-            // 
-            this.identidadPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "identidadP", true));
-            this.identidadPTextBox.Location = new System.Drawing.Point(180, 74);
-            this.identidadPTextBox.Name = "identidadPTextBox";
-            this.identidadPTextBox.Size = new System.Drawing.Size(306, 20);
-            this.identidadPTextBox.TabIndex = 13;
-            this.identidadPTextBox.TextChanged += new System.EventHandler(this.identidadPTextBox_TextChanged);
-            // 
             // nombredelamadreTextBox
             // 
             this.nombredelamadreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nombredelamadre", true));
-            this.nombredelamadreTextBox.Location = new System.Drawing.Point(144, 21);
+            this.nombredelamadreTextBox.Location = new System.Drawing.Point(164, 86);
             this.nombredelamadreTextBox.Name = "nombredelamadreTextBox";
             this.nombredelamadreTextBox.Size = new System.Drawing.Size(269, 20);
             this.nombredelamadreTextBox.TabIndex = 15;
@@ -444,7 +443,7 @@
             // nombredelpadreTextBox
             // 
             this.nombredelpadreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nombredelpadre", true));
-            this.nombredelpadreTextBox.Location = new System.Drawing.Point(180, 38);
+            this.nombredelpadreTextBox.Location = new System.Drawing.Point(151, 90);
             this.nombredelpadreTextBox.Name = "nombredelpadreTextBox";
             this.nombredelpadreTextBox.Size = new System.Drawing.Size(306, 20);
             this.nombredelpadreTextBox.TabIndex = 19;
@@ -453,7 +452,7 @@
             // ocupacionMTextBox
             // 
             this.ocupacionMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "ocupacionM", true));
-            this.ocupacionMTextBox.Location = new System.Drawing.Point(144, 135);
+            this.ocupacionMTextBox.Location = new System.Drawing.Point(163, 119);
             this.ocupacionMTextBox.Name = "ocupacionMTextBox";
             this.ocupacionMTextBox.Size = new System.Drawing.Size(269, 20);
             this.ocupacionMTextBox.TabIndex = 21;
@@ -461,7 +460,7 @@
             // ocupacionPTextBox
             // 
             this.ocupacionPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "ocupacionP", true));
-            this.ocupacionPTextBox.Location = new System.Drawing.Point(180, 142);
+            this.ocupacionPTextBox.Location = new System.Drawing.Point(152, 125);
             this.ocupacionPTextBox.Name = "ocupacionPTextBox";
             this.ocupacionPTextBox.Size = new System.Drawing.Size(306, 20);
             this.ocupacionPTextBox.TabIndex = 23;
@@ -470,7 +469,7 @@
             // telefonoMTextBox
             // 
             this.telefonoMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "telefonoM", true));
-            this.telefonoMTextBox.Location = new System.Drawing.Point(144, 91);
+            this.telefonoMTextBox.Location = new System.Drawing.Point(163, 160);
             this.telefonoMTextBox.Name = "telefonoMTextBox";
             this.telefonoMTextBox.Size = new System.Drawing.Size(269, 20);
             this.telefonoMTextBox.TabIndex = 25;
@@ -478,7 +477,7 @@
             // telefonoPTextBox
             // 
             this.telefonoPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "telefonoP", true));
-            this.telefonoPTextBox.Location = new System.Drawing.Point(180, 109);
+            this.telefonoPTextBox.Location = new System.Drawing.Point(151, 164);
             this.telefonoPTextBox.Name = "telefonoPTextBox";
             this.telefonoPTextBox.Size = new System.Drawing.Size(306, 20);
             this.telefonoPTextBox.TabIndex = 27;
@@ -488,46 +487,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(144, 502);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(279, 502);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(426, 502);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(564, 502);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
@@ -567,28 +526,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información de Madre";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(213, 117);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 20);
-            this.dateTimePicker1.TabIndex = 34;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(701, 12);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(217, 185);
-            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPictureBox.TabIndex = 35;
-            this.fotoPictureBox.TabStop = false;
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(701, 203);
@@ -611,23 +548,52 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "jpg,png|*.jpg;*.png";
+            // 
+            // identidadPTextBox
+            // 
+            this.identidadPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "identidadP", true));
+            this.identidadPTextBox.Location = new System.Drawing.Point(151, 52);
+            this.identidadPTextBox.Name = "identidadPTextBox";
+            this.identidadPTextBox.Size = new System.Drawing.Size(306, 20);
+            this.identidadPTextBox.TabIndex = 13;
+            this.identidadPTextBox.TextChanged += new System.EventHandler(this.identidadPTextBox_TextChanged);
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(701, 55);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(207, 119);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 40;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
+            // 
+            // fechaingresoDateTimePicker
+            // 
+            this.fechaingresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaingreso", true));
+            this.fechaingresoDateTimePicker.Location = new System.Drawing.Point(213, 117);
+            this.fechaingresoDateTimePicker.Name = "fechaingresoDateTimePicker";
+            this.fechaingresoDateTimePicker.Size = new System.Drawing.Size(249, 20);
+            this.fechaingresoDateTimePicker.TabIndex = 41;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 548);
+            this.ClientSize = new System.Drawing.Size(1095, 548);
+            this.Controls.Add(this.fechaingresoDateTimePicker);
+            this.Controls.Add(this.fotoPictureBox);
+            this.Controls.Add(label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.fotoPictureBox);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(codigoLabel);
@@ -647,8 +613,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,7 +641,6 @@
         private System.Windows.Forms.TextBox direccionMTextBox;
         private System.Windows.Forms.TextBox direccionPTextBox;
         private System.Windows.Forms.TextBox identidadMTextBox;
-        private System.Windows.Forms.TextBox identidadPTextBox;
         private System.Windows.Forms.TextBox nombredelamadreTextBox;
         private System.Windows.Forms.TextBox nombredelninoTextBox;
         private System.Windows.Forms.TextBox nombredelpadreTextBox;
@@ -686,16 +651,13 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripButton Cancelar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox identidadPTextBox;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.DateTimePicker fechaingresoDateTimePicker;
     }
 }
