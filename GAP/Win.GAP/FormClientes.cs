@@ -233,5 +233,10 @@ namespace Win.GAP
             var busqueda = textBox1.Text;
             clientesBindingSource.DataSource = _clientes.ObtenerClientes(busqueda);
         }
+
+        private void codigoLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,6 +44,9 @@
             System.Windows.Forms.Label telefonoPLabel;
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
+            System.Windows.Forms.Label codigoLabel1;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
             this.clientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -79,9 +82,10 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.identidadPTextBox = new System.Windows.Forms.TextBox();
             this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codigoTextBox = new System.Windows.Forms.TextBox();
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionMLabel = new System.Windows.Forms.Label();
@@ -96,6 +100,9 @@
             telefonoMLabel = new System.Windows.Forms.Label();
             telefonoPLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            codigoLabel1 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingNavigator)).BeginInit();
             this.clientesBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -178,7 +185,7 @@
             // 
             nombredelninoLabel.AutoSize = true;
             nombredelninoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombredelninoLabel.Location = new System.Drawing.Point(59, 81);
+            nombredelninoLabel.Location = new System.Drawing.Point(59, 142);
             nombredelninoLabel.Name = "nombredelninoLabel";
             nombredelninoLabel.Size = new System.Drawing.Size(148, 16);
             nombredelninoLabel.TabIndex = 16;
@@ -238,7 +245,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(59, 117);
+            label1.Location = new System.Drawing.Point(59, 179);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(129, 16);
             label1.TabIndex = 39;
@@ -436,7 +443,7 @@
             // nombredelninoTextBox
             // 
             this.nombredelninoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nombredelnino", true));
-            this.nombredelninoTextBox.Location = new System.Drawing.Point(213, 80);
+            this.nombredelninoTextBox.Location = new System.Drawing.Point(213, 141);
             this.nombredelninoTextBox.Name = "nombredelninoTextBox";
             this.nombredelninoTextBox.Size = new System.Drawing.Size(249, 20);
             this.nombredelninoTextBox.TabIndex = 17;
@@ -571,31 +578,72 @@
             this.fotoPictureBox.TabIndex = 40;
             this.fotoPictureBox.TabStop = false;
             // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
-            // 
             // fechaingresoDateTimePicker
             // 
             this.fechaingresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaingreso", true));
-            this.fechaingresoDateTimePicker.Location = new System.Drawing.Point(213, 117);
+            this.fechaingresoDateTimePicker.Location = new System.Drawing.Point(213, 179);
             this.fechaingresoDateTimePicker.Name = "fechaingresoDateTimePicker";
             this.fechaingresoDateTimePicker.Size = new System.Drawing.Size(249, 20);
             this.fechaingresoDateTimePicker.TabIndex = 41;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(213, 154);
+            this.textBox1.Location = new System.Drawing.Point(213, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 20);
             this.textBox1.TabIndex = 42;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // codigoLabel1
+            // 
+            codigoLabel1.AutoSize = true;
+            codigoLabel1.Location = new System.Drawing.Point(59, 105);
+            codigoLabel1.Name = "codigoLabel1";
+            codigoLabel1.Size = new System.Drawing.Size(0, 13);
+            codigoLabel1.TabIndex = 43;
+            codigoLabel1.Click += new System.EventHandler(this.codigoLabel1_Click);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(59, 109);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(58, 16);
+            label3.TabIndex = 45;
+            label3.Text = "Codigo";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(59, 82);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(56, 16);
+            label4.TabIndex = 46;
+            label4.Text = "Buscar";
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataSource = typeof(BL.GAP.Clientes);
+            // 
+            // codigoTextBox
+            // 
+            this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "codigo", true));
+            this.codigoTextBox.Location = new System.Drawing.Point(213, 107);
+            this.codigoTextBox.Name = "codigoTextBox";
+            this.codigoTextBox.Size = new System.Drawing.Size(249, 20);
+            this.codigoTextBox.TabIndex = 47;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 548);
+            this.Controls.Add(this.codigoTextBox);
+            this.Controls.Add(label4);
+            this.Controls.Add(label3);
+            this.Controls.Add(codigoLabel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.fechaingresoDateTimePicker);
             this.Controls.Add(this.fotoPictureBox);
@@ -670,5 +718,6 @@
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.DateTimePicker fechaingresoDateTimePicker;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox codigoTextBox;
     }
 }

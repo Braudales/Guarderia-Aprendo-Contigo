@@ -30,11 +30,14 @@ namespace BL.GAP
         public BindingList<Clientes> ObtenerClientes(string buscar)
         {
 
-           var query = _contexto.clientes.Where (Clientes=> Clientes.Nombredelnino.ToLower().Contains(buscar.ToLower())).ToList();
-            ListaClientes = new BindingList<Clientes>(query); 
+           var query = _contexto.clientes.Where (Clientes=> Clientes.Nombredelnino.ToLower().Contains(buscar.ToLower())|| Clientes.codigo.ToLower().Contains(buscar.ToLower())).ToList();
+            ListaClientes = new BindingList<Clientes>(query);
+          
 
             return ListaClientes;
         }
+
+     
 
         public Resultado guardarclientes(Clientes clientes)
         {
@@ -91,6 +94,7 @@ namespace BL.GAP
     public class Clientes
     {
         public int Id { get; set; }
+        public string codigo { get; set; }
         public string Nombredelnino { get; set; }
         public string Nombredelpadre { get; set; }
         public DateTime fechaingreso { get; set; }
